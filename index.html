@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="definition">
+        <h1>Calcule seu IMC</h1>
+        <p><dfn id="defineImc">O que é o IMC?</dfn><br>IMC é o Índice de Massa Corporal, utilizado para medir se uma pessoa está em seu peso ideal levando em consideração sua altura.</p>
+        </div>
+    </header>
+
+    <body>
+        <div class="calculadora-Container">
+            <h2>Calculadora de IMC</h2>
+            <form>
+                <div class="peso-Container">
+                    <h3>Digite seu peso (kg)</h3>
+
+                    <input type="range" class="inputPeso" id="peso" value="0" min="0" max="350"  oninput="displayPeso.value=value" onchange="displayPeso.value=value">
+
+                    <input type="number" class="number" id="displayPeso" value="0" oninput="peso.value=value" onchange="peso.value=value"> 
+                </div>
+
+                <div class="altura-Container">
+                    <h3>Digite sua altura (cm)</h3>
+
+                    <input type="range" class="inputAltura" id="altura" value="0" min="0" max="280" oninput="displayAltura.value=value" onchange="displayAltura.value=value">
+
+                    <input type="number" class="number" id="displayAltura" value="0" oninput="altura.value=value" onchange="altura.value=value">
+                </div>
+
+                <input id ="btnCalcular" type="button" value="Calcular" class="BotaoCalcular">
+            </form>
+            <div id="resultado"></div>
+        </div>
+    </body>
+
+    <footer>
+        <nav>
+            <p>Design by: <cite>Marcelo Eduardo Esturrari</cite></p>
+        </nav>
+    </footer>
+    <script  src="./script/script.js"></script>
+</body>
+
+</html>
